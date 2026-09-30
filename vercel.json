@@ -1,0 +1,12 @@
+{
+  "installCommand": "npm ci --prefix frontend",
+  "buildCommand": "npm run build --prefix frontend",
+  "outputDirectory": "frontend/dist",
+  "rewrites": [
+    { "source": "/callback", "destination": "/index.html" },
+    { "source": "/login", "destination": "/index.html" },
+    { "source": "/organizers", "destination": "/index.html" },
+    { "source": "/events/(.*)", "destination": "/index.html" },
+    { "source": "/dashboard/(.*)", "destination": "/index.html" }
+  ]
+}
